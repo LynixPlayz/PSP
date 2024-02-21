@@ -14,10 +14,22 @@ function getStartOfUrl()
     }
 }
 
+function getStagePathName()
+{
+    if(window.origin.includes('github'))
+    {
+        return "/" + window.location.pathname.toString().split("/")[2] + "/" + window.location.pathname.toString().split("/")[3]
+    }
+    else
+    {
+        return window.location.pathname
+    }
+}
+
 $("#choice1").on("click", function(){
-    window.location = getStartOfUrl() + window.location.pathname.replace("2", "3") + window.location.search + "a" 
+    window.location = getStartOfUrl() + getStagePathName().replace("2", "3") + window.location.search + "a" 
 });
 
 $("#choice2").on("click", function(){
-    window.location = getStartOfUrl() + window.location.pathname.replace("2", "3") + window.location.search + "b"
+    window.location = getStartOfUrl() + getStagePathName().replace("2", "3") + window.location.search + "b"
 });

@@ -1,6 +1,23 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
+function getStartOfUrl()
+{
+    if(window.origin.toString().includes("github") && window.location.toString().includes("PSP"))
+    {
+        return window.origin + "/PSP"
+    }
+    else if(window.origin.includes('github'))
+    {
+        return window.origin + "/" + window.location.pathname.toString().split("/")[1]
+    }
+    else
+    {
+        return location.origin
+    }
+}
+console.log(getStartOfUrl())
+
 $("#choice1").on("click", function(){
     window.location = location.origin + "/" + urlParams.get('c') + "1"
 });

@@ -1,6 +1,6 @@
 @font-face {
     font-family: graffiti;
-    src: url(../graffiti.ttf);
+    src: url(./graffiti.ttf);
 }
 .font-graffiti{
     font-family: graffiti;

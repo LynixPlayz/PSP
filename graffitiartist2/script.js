@@ -1,3 +1,7 @@
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+
 function getStartOfUrl()
 {
     if(window.origin.toString().includes("github") && window.location.toString().includes("PSP"))
@@ -27,9 +31,9 @@ function getStagePathName()
 }
 
 $("#choice1").on("click", function(){
-    window.location = getStartOfUrl() + getStagePathName().replace("2", "3") + window.location.search + "a" 
+    window.location = getStartOfUrl() + getStagePathName().replace("2", "3") + window.location.search.toString().split("&")[0] + "a&c=" +  urlParams.get("c")
 });
 
 $("#choice2").on("click", function(){
-    window.location = getStartOfUrl() + getStagePathName().replace("2", "3") + window.location.search + "b"
+    window.location = getStartOfUrl() + getStagePathName().replace("2", "3") + window.location.search.toString().split("&")[0] + "b&c=" + urlParams.get("c")
 });

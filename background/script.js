@@ -20,7 +20,7 @@ console.log(getStartOfUrl())
 
 
 $("#choice1").on("click", function(){
-    window.location = getStartOfUrl() + "/" + urlParams.get('c') + "1" + "/index.html"
+    window.location = getStartOfUrl() + "/graffitiartist1" + "/index.html?c=" + urlParams.get("c")
 });
 
 function type(txt, milliseconds, elementId)

@@ -20,7 +20,7 @@ function getStartOfUrl()
 
 function getStagePathName()
 {
-    if(window.origin.includes('github'))
+    if(window.origin.includes('github') && !window.origin.toString().includes("alexpsp-bypassed.github.io"))
     {
         return "/" + window.location.pathname.toString().split("/")[2] + "/" + window.location.pathname.toString().split("/")[3]
     }

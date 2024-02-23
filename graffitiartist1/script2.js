@@ -8,7 +8,7 @@ function getStartOfUrl()
     {
         return window.origin + "/PSP"
     }
-    else if(window.origin.includes('github'))
+    else if(window.origin.includes('github') && !window.origin.toString().includes("alexpsp-bypassed.github.io"))
     {
         return window.origin + "/" + window.location.pathname.toString().split("/")[1]
     }

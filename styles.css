@@ -1,3 +1,6 @@
+body{
+    overflow:hidden;
+}
 @font-face {
     font-family: graffiti;
     src: url(./graffiti.ttf);
@@ -7,7 +10,7 @@
 }
 .h-50vh
 {
-    height: 58vh;
+    height: 48vh;
 }
 .h-60vh
 {
